@@ -33,7 +33,25 @@ describe "testeamos a Morfeo" {
     assert.notThat(morfeo.estaCansado())
   }
   
-  test "description" {
+}
+
+describe "Testeamos a Trinity" {
+  test "trinity no es el elegido" {
+    assert.notThat(trinity.esElElegido())
+  }
+
+  test "vitalidad de Trinity despues de saltar" {
+    trinity.saltar()
+    assert.equals(0, trinity.vitalidad())
+  }
+}
+
+describe "testeamos la nave" {
+  test "cantidad de pasajeros inicial de la nave" {
+    assert.equals(3,nave.cantidadDePasajeros())
+  }
+  test "pasajero con mayor vitalidad al incio" {
+    assert.equals(neo, nave.pasajeroConMayorVitalidad())
     
   }
 }
